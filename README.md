@@ -8,8 +8,8 @@ The software has been tested with the following versions, but later versions of
 CRISPRoff, python, biopthon, and tensorflow should also work.
 
 * biopython  : 1.78 
-* python     : 3.8.8
-* tensorflow : 2.3.0
+* python     : 3.9.2
+* tensorflow : 2.4.1
 * viennarna  : 2.2.5
 * CRISPRoff  : 1.1.2
 
@@ -114,11 +114,7 @@ this software, see LICENSE. If not, see http://www.gnu.org/licenses/.
 
 If you use CRISPRon in your publication please cite
 
-CRISPRon: enhanced data-driven on-target CRISPR-Cas9 gRNA efficiency prediction
-
-Xiang X, Corsi GI, Anthon C, Qu K, , Pan X, Liang X, Han P, Dong Z, Liu L,
-Zhong J, Ma T, Wang J, Zhang X, Jiang H, Xu F, Liu X, Xu X, Wang J, Yang H,
-Bolund L, Church GM, Lin L, Gorodkin J, Luo Y. Submitted.
+**CRISPRon: enhanced data-driven on-target CRISPR-Cas9 gRNA efficiency prediction.** Xiang X, Corsi GI, Anthon C, Qu K, , Pan X, Liang X, Han P, Dong Z, Liu L, Zhong J, Ma T, Wang J, Zhang X, Jiang H, Xu F, Liu X, Xu X, Wang J, Yang H, Bolund L, Church GM, Lin L, Gorodkin J, Luo Y. Submitted.
 
 The data used for training of CRISPRon comes in part from the paper from Kim
 2019, please cite that as well
