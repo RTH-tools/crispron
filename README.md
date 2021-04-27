@@ -1,5 +1,5 @@
 # CRISPRon
-Enhanced on-target CRISPR-Cas9 gRNA efficiency prediction by data generation, integration and deep learning
+CRISPRon: enhanced data-driven on-target CRISPR-Cas9 gRNA efficiency prediction
 
 ## Installation
 
@@ -62,7 +62,7 @@ To run the software on your own data, first construct a FASTA file with all the
 sequences you want to have tested. See test/seq.fa for FASTA format. Just
 remember that the program needs at least 30 nucleotides to fit the full target
 
-	prefix (4nt) -- target (20nt) -- PAM (3nt, NGG) -- suffix (4nt)
+	prefix (4nt) -- target (20nt) -- PAM (3nt, NGG) -- suffix (3nt)
 
 And then run the program with your own fasta file and an appropriate output
 directory.
@@ -123,8 +123,7 @@ The data used for training of CRISPRon comes in part from the paper from Kim
 
 If you use CRISPRspec / CRISPRoff in your publication please cite
 
-**CRISPR-Cas9 off-targeting assessment with nucleic acid duplex energy
-parameters.** Alkan F, Wenzel A, Anthon C, Havgaard JH, Gorodkin J Genome Biol.
+**CRISPR-Cas9 off-targeting assessment with nucleic acid duplex energy parameters.** Alkan F, Wenzel A, Anthon C, Havgaard JH, Gorodkin J Genome Biol.
 2018 Oct 26;19(1):177
 
 
