@@ -16,7 +16,7 @@ CRISPRoff, python, biopthon, and tensorflow should also work.
 ### CRISPRoff
 You need to install CRISPRoff (version 1.1.2 or later) which can be downloaded from 
 
-https://rth.dk/resources/crispr/crisproff/downloads
+https://rth.dk/resources/crispr/crisproff/download
 
 After downloading and un-packing, you should move
 CRISPRspec_CRISPRoff_pipeline.py to the bin folder of CRISPRon and
