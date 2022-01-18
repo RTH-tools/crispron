@@ -1,55 +1,32 @@
 # CRISPRon
 CRISPRon: enhanced data-driven on-target CRISPR-Cas9 gRNA efficiency prediction
 
-## Installation
+## Requirements
 
-### Prerequisites
-The software has been tested with the following versions, but later versions of
-CRISPRoff, python, biopthon, and tensorflow should also work.
+- Docker version 20.10.9
+- docker-compose version 1.29.2
+- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
 
-* biopython  : 1.78 
-* python     : 3.9.2
-* tensorflow : 2.4.1
-* viennarna  : 2.2.5
-* CRISPRoff  : 1.1.2
 
-### CRISPRoff
-You need to install CRISPRoff (version 1.1.2 or later) which can be downloaded from 
+### Building
+To build with GPU run:
 
-https://rth.dk/resources/crispr/crisproff/download
-
-After downloading and un-packing, you should move
-CRISPRspec_CRISPRoff_pipeline.py to the bin folder of CRISPRon and
-energy_dics.pkl to data/model/energy_dics.pkl
-
-### Other requirements
-
-The easiest way to get the needed prerequisites to run CRISPRon is through
-conda. If you have conda installed already you can skip this step, otherwise go
-to https://docs.conda.io/en/latest/miniconda.html to learn how to install conda
-on your system. Once conda is correctly installed. You need to install the
-crispron requirements with
-
-	conda create -y -c bioconda -c conda-forge -n crispron python=3 tensorflow=2
-	conda install -y -c bioconda -c conda-forge -n crispron biopython viennarna=2.2.5
-
-Later versions are also expected to work. However, the program depends on
-RNAfold and versions other than 2.2.5 of the ViennaRNA package will give
-slightly different results.
+```
+docker-compose up -d --build
+```
 
 ## Testing the software
-Assuming you have installed the prerequisites in a conda environment called
-crispron, you can run the built-in software test
+Enter the docker container and run 
 
-	conda activate crispron
-	./bin/test.sh
+```
+docker exec -it $(docker-compose ps -q) bash
+./bin/test.sh
+```
 
 Which should end with
 
 	TEST ok
 
-Note that the test requires diff from diffutils which must be installed as a
-normal package on your system.
 
 ## Running the software
 Assuming you have installed the prerequisites in a conda environment called
