@@ -58,6 +58,16 @@ crispron, you can run the software on the test data
 	conda activate crispron
 	./bin/CRISPRon.sh test/seq.fa test/outdir
 
+
+**Output files**
+
+The script CRISPRon.sh outputs the following files:
+- 23mers.fa: the 23 nt target + PAM sequences extracted from the input FASTA file
+- 30mers.fa: the 30 nt prefix + target + PAM + suffix sequences extracted from the input FASTA file
+- CRISPRparams.tsv: a tab-separated table containing the free energy changes computed by the CRISPRoff software. These are the RNA-DNA hybridisation energy (both unweighted and weighted), the DNA-DNA opening energy, the RNA-RNA spacer self-folding energy, and the CRISPRoff score. For details, read about CRISPRoff at https://rth.dk/resources/crispr/
+- crispron.csv: a comma-separated table containing the 30 nt prefix + target + PAM + suffix sequences  and the CRISPRon predicted indel frequencies
+
+
 To run the software on your own data, first construct a FASTA file with all the
 sequences you want to have tested. See test/seq.fa for FASTA format. Just
 remember that the program needs at least 30 nucleotides to fit the full target
