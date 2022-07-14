@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+    tensorflow:
+        image: 'tensorflow:latest'
+        build:
+            context: ./
+            dockerfile: tf.Dockerfile
+        volumes: 
+            - ./:/crispron
+        command: tail -f /dev/null
+        ipc: host
+        deploy:
+            resources:
+              reservations:
+                devices:
+                  - capabilities: [gpu]
+                    driver: nvidia
