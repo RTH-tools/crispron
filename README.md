@@ -1,6 +1,9 @@
 # CRISPRon
 CRISPRon: enhanced data-driven on-target CRISPR-Cas9 gRNA efficiency prediction
 
+## Webserver
+If you are just looking for ways to design or analyse your CRISPR sgRNAs, you may find our webserver at https://rth.dk/resources/crispr/crispron/ an easier starting point.
+
 ## Installation
 
 ### Prerequisites
@@ -103,6 +106,9 @@ which is
 
 	GTAGCATTTCTTCGAAAGTATGG
 
+## Data
+
+The data used for training CRISPRon v. 1.0 may be downloaded from the official CRISPRon page at (https://rth.dk/resources/crispr/crispron/download)
 
 ## Copyright
 
