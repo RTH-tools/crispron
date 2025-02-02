@@ -106,9 +106,40 @@ which is
 
 	GTAGCATTTCTTCGAAAGTATGG
 
-## Data
+## Data and training
 
 The data used for training CRISPRon v. 1.0 may be downloaded from the official CRISPRon page at (https://rth.dk/resources/crispr/crispron/download)
+
+The DeepCRISPRon_train.py is run like this
+
+	export OPT=adam
+	export LEARN=0.0001
+	export EPOCHS=3000
+	export N_VAL=6
+	export N_MOD=5
+	export SEQ_C=30mer_gRNA
+	export VAL_C=Quant_norm_efficiency
+	export VAL_G=CRISPRoff
+	export BATCH_SIZE=500
+	export PREF="validation_set"
+	export DT= DeepCRISPRon_train.py
+	export SEED=0
+	export TYPE=CG
+	export M=2
+
+	python3 $DT $OPT $LEARN $EPOCHS $SEQ_C $VAL_C $VAL_G $N_VAL $M $BATCH_SIZE $SEED $TYPE  $PREF*
+
+With the options above, you would need a partition of the data in 6 datasets,
+where the 6th will be held out. The data sets should be named
+validation_set1.csv ..  ..6.csv, and the sixth will be held out. With M=2, the
+second data set would be used for validation (early stopping).
+
+How to partition the data is described in the paper
+
+Xiang, X., Corsi, G.I., Anthon, C. et al. Enhancing CRISPR-Cas9 gRNA efficiency
+prediction by data integration and deep learning. Nat Commun 12, 3238 (2021).
+https://doi.org/10.1038/s41467-021-23576-0
+
 
 ## Copyright
 
