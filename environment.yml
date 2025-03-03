@@ -19,3 +19,5 @@ tensorboard==2.14
 tensorflow==2.14
 trf==4.09.1
 viennarna==2.6.4
+gffutils
+pysqlite3
