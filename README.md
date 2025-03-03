@@ -33,8 +33,7 @@ to https://docs.conda.io/en/latest/miniconda.html to learn how to install conda
 on your system. Once conda is correctly installed. You need to install the
 crispron requirements with
 
-	conda create -y -c bioconda -c conda-forge -n crispron python=3 tensorflow=2
-	conda install -y -c bioconda -c conda-forge -n crispron biopython viennarna=2.2.5
+	conda create -y -c biocanda -c conda-forge --name crispron --file environment.yml
 
 Later versions are also expected to work. However, the program depends on
 RNAfold and versions other than 2.2.5 of the ViennaRNA package will give
